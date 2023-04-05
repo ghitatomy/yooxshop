@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/color_button_layout"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/selected_color_indicator_image_view"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:padding="2dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircularStyle"
+        app:srcCompat="@drawable/image_view_pager_dot"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/color_button"
+        android:layout_width="32dp"
+        android:layout_height="42dp"
+        android:backgroundTint="@color/white"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/selected_color_indicator_image_view"
+        app:layout_constraintEnd_toEndOf="@+id/selected_color_indicator_image_view"
+        app:layout_constraintStart_toStartOf="@+id/selected_color_indicator_image_view"
+        app:layout_constraintTop_toTopOf="@+id/selected_color_indicator_image_view"
+        app:shapeAppearanceOverlay="@style/CircularStyle"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
